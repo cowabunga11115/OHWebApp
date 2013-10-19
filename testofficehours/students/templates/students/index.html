@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Office Hours App</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width-device-width, initial-scale=1.0">
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+		<script>
+			function addperson()
+			{
+				var email = document.getElementById("email").value;
+				var d = document.getElementById("description").value;
+				alert("This is the email: " + email + " and they need help on: " + d)
+			}
+		</script>
+		<form method="post" action="/items/new">
+			Email: <input type="text" id="email"><br>
+			Problem Description: <input type="text" id="description">
+		</form>
+		<button type="button" onclick="addperson()" class="btn btn-primary">Add me to Queue</button>
+
+		<!--This prints the names of all the students in the database-->
+		{% if latest_queue %}
+		<ul>
+			{% for student in latest_queue %}
+				<li><p>{{ student.name }} : {{ student.description }}</p></li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+	</body>
+</html>

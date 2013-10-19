@@ -8,6 +8,8 @@ class Student(models.Model):
 	def __unicode__(self):  # Python 3: def __str__(self):
 		outputString = "Name: " + str(self.name) + " Description: " + str(self.description)
 		return outputString
+	def printsomething(self):
+		return "Hello"
 
 	def delete_myself(self):
 		self.delete()
@@ -16,4 +18,5 @@ class Student(models.Model):
 		self.delete()
 
 	def helped_by_peer(self, peername):
+		
 		self.delete()
