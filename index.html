@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    </head>
+    <body>
+        <div class="container">
+	    <div class="row">
+	        <div>
+		    <!--use JS to add class name-->
+		    <h1 id="OH">Office Hours - </h1>
+		</div>
+	    </div>
+	    <div class="row">
+		<div class="span6">
+		    <form id="qform">
+		        <fieldset>
+			    <input id="name" type="text" placeholder="Name">
+			    <input id="description" type="text" placeholder="Description">
+			    <button id="enqueue" type="submit" class="btn btn-success">Enqueue me!</button>
+			</fieldset>
+		    </form>
+		</div>
+		<div class="span6" id="queue">
+		    <!--update with JS-->
+		    <!-- example (needs editing)
+		    <div class="btn-group">
+		        <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> Name</a>
+			<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+			<ul class="dropdown-menu">
+			    <li><a href="#">An instructor helped me</a></li>
+			    <li><a href="#">A student helped me</a></li>
+			    <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+			</ul>
+		    </div>
+		    -->
+		</div>
+	    </div>
+	</div>
+        <script src="http://code.jquery.com/jquery.js">
+	<script src="js/bootstrap.min.js"></script>
+	<script src="queue.js"></script>
+    </body>
+</html>
